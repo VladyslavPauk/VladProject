@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StudentRepository {
+
     public static List<Student> getAllStudent() {
 
         try {
@@ -58,9 +59,43 @@ public class StudentRepository {
                 student.setId(resultSet.getInt("id"));
             }
 
-        } catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return student;
+    }
+
+    public static void removeStudent(int id) {
+
+        try {
+            Class.forName("org.postgresql.Driver");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        Connection connection = null;
+        try {
+            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/java_db", "postgres", "0708");
+            Statement statement = connection.createStatement();
+            int rows = statement.executeUpdate("delete from Student where id =" + id);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public  static void addStudent (int id, String name, String surname, int age, int groupid) {
+        try {
+            Class.forName("org.postgresql.Driver");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        Connection connection = null;
+        try {
+            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/java_db", "postgres", "0708");
+            Statement statement = connection.createStatement();
+            int rows = statement.executeUpdate("insert into Student (id, name, surname, age, groupid) values (" + id + ", '" + name + "', '" + surname + "', " + age + ", " + groupid + ")");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

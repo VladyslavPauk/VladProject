@@ -9,9 +9,9 @@ public class FirsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-       List<Student> studentsList = StudentRepository.getAllStudent();
+        List<Student> studentsList = StudentRepository.getAllStudent();
 
-       request.setAttribute("studentsList", studentsList);
+        request.setAttribute("studentsList", studentsList);
 
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/ListStudents.jsp");
         requestDispatcher.forward(request, response);
