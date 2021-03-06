@@ -12,6 +12,7 @@
 </head>
 <body>
     <h1>Please enter the next field</h1>
+
 <form action="/list-student" method="post">
     name <input type="text" name="name">
     surname <input type="text" name="surname">
@@ -19,7 +20,6 @@
     groupId <input type="number" name="groupId">
     id <input type="number" name="id">
     <input type="submit" value="Save">
-
 </form>
 
 </body>

@@ -19,7 +19,8 @@
 <%=someStudent%>
 
 <form action="/list-student" method="get">
-    <p><input type="submit" value="Delete this Student"></p>
+    <p><input type="submit" value="Delete this Student" name = "delete"></p>
+    <p><input type="hidden" value= "<%=someStudent.getId()%>" name="id"></p>
 </form>
 </body>
 </html>
