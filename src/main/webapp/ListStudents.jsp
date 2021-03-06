@@ -19,5 +19,8 @@
     }
     ;
 %>
+<form action="/list-student" method="Post">
+    <p><input type="submit" value="Add Student"></p>
+</form>
 </body>
 </html>

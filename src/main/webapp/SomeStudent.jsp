@@ -17,5 +17,9 @@
     Student someStudent = (Student) request.getAttribute("student");
 %>
 <%=someStudent%>
+
+<form action="/list-student" method="get">
+    <p><input type="submit" value="Delete this Student"></p>
+</form>
 </body>
 </html>

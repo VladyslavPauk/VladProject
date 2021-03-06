@@ -6,7 +6,7 @@
 
     <servlet>
         <servlet-name>FirstServlet</servlet-name>
-        <servlet-class>com.example.VladProject.FirsServlet</servlet-class>
+        <servlet-class>com.example.VladProject.FirstServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>FirstServlet</servlet-name>
@@ -38,6 +38,15 @@
     <servlet-mapping>
         <servlet-name>SecondServlet</servlet-name>
         <url-pattern>/list-student</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CreateAndAddStudent</servlet-name>
+        <jsp-file>/CreateAndAddStudent.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateAndAddStudent</servlet-name>
+        <url-pattern>/CreateAndAddStudent-jsp</url-pattern>
     </servlet-mapping>
 
 
