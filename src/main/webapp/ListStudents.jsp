@@ -16,10 +16,10 @@
 <% List<Student> list = (List<Student>) request.getAttribute("studentsList");
     for (int i = 0; i < list.size(); i++) {
         out.println("<p><a target=\"_blank\" href=" + "http://localhost:8080/list-student?id=" + list.get(i).getId() + ">" + list.get(i) + "</a></p>");
-    }
-    ;
+    };
 %>
-<form action="/list-student" method="Post">
+
+<form action="CreateAndAddStudent.jsp">
     <p><input type="submit" value="Add Student"></p>
 </form>
 </body>

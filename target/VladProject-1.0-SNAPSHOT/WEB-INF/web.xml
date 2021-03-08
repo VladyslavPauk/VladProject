@@ -5,11 +5,11 @@
          version="4.0">
 
     <servlet>
-        <servlet-name>FirstServlet</servlet-name>
-        <servlet-class>com.example.VladProject.FirstServlet</servlet-class>
+        <servlet-name>ShowAllStudentServlet</servlet-name>
+        <servlet-class>com.example.VladProject.ShowAllStudentServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>FirstServlet</servlet-name>
+        <servlet-name>ShowAllStudentServlet</servlet-name>
         <url-pattern>/list-students</url-pattern>
     </servlet-mapping>
 
@@ -32,11 +32,11 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>SecondServlet</servlet-name>
-        <servlet-class>com.example.VladProject.SecondServlet</servlet-class>
+        <servlet-name>ShowDeleteAddSomeStudentServlet</servlet-name>
+        <servlet-class>com.example.VladProject.ShowDeleteAddSomeStudentServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>SecondServlet</servlet-name>
+        <servlet-name>ShowDeleteAddSomeStudentServlet</servlet-name>
         <url-pattern>/list-student</url-pattern>
     </servlet-mapping>
 

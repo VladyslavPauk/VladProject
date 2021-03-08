@@ -5,11 +5,11 @@ import javax.servlet.http.*;
 import java.io.IOException;
 import java.util.List;
 
-public class FirstServlet extends HttpServlet {
+public class ShowAllStudentServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        List<Student> studentsList = StudentRepository.getAllStudent();
+        List<Student> studentsList = StudentService.getAllStudent();
 
         request.setAttribute("studentsList", studentsList);
 
@@ -20,6 +20,6 @@ public class FirstServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) {
     }
 }
